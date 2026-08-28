@@ -6,6 +6,9 @@
 [![Version](https://img.shields.io/badge/version-v.0.1-orange.svg)](CHANGELOG.md)
 [![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)](#installation)
 [![Language](https://img.shields.io/badge/built_with-C-blue.svg)](azravibe_lang_v1/)
+[![Story](https://img.shields.io/badge/read%20my%20story-%F0%9F%93%96-8A2BE2.svg)](STORY.md)
+
+[![Support on Instagram](https://img.shields.io/badge/Support%20the%20Dev-%40n1n.nawid-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/1n1.nawid)
 
 ---
 
@@ -200,6 +203,17 @@ Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to:
 
 - **Issues:** [GitHub Issues](https://github.com/11nawid/azravibe/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/11nawid/azravibe/discussions)
+- **The Story:** [Why I Built Azravibe](STORY.md)
+
+---
+
+## Support the Developer
+
+Azravibe is a personal learning project, built in my spare time and shared for free. If you like it, found it useful, or want to follow along with what I build next, consider supporting me:
+
+[![Support on Instagram](https://img.shields.io/badge/Support%20the%20Dev-%40n1n.nawid-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/1n1.nawid)
+
+Every follow, share, and message genuinely means a lot.
 
 ---
 
