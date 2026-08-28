@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://11nawid.github.io/azravibe/sitemap.xml
+Sitemap: https://azravibe.com/sitemap.xml

@@ -1,228 +1,115 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>آذرویب | Azravibe — یک زبان برنامه‌نویسی فارسی‌محور و محیط توسعه</title>
+  <title>Azravibe — a Persian-first programming language</title>
 
-  <!-- Primary SEO -->
-  <meta name="description" content="Azravibe (آذرویب) is a Persian/Farsi-first programming language and RTL-focused IDE. Write code with Persian keywords like اگر، کار، و توی — interpreted in C, open source (MIT).">
-  <meta name="keywords" content="Azravibe, آذرویب, Persian programming language, Farsi programming, زبان برنامه‌نویسی فارسی, زبان برنامه نویسی, Persian keywords, RTL IDE, Persian compiler, interpreter, open source, برنامه نویسی, کامپایلر فارسی">
+  <meta name="description" content="Azravibe is a programming language you write in Persian. Open source, free, with a right-to-left IDE.">
   <meta name="author" content="Azravibe">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#076d70">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://11nawid.github.io/azravibe/">
+  <link rel="canonical" href="https://azravibe.com/">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Azravibe">
-  <meta property="og:title" content="Azravibe — Persian-first programming language & RTL IDE">
-  <meta property="og:description" content="Write code using natural Persian/Farsi keywords. A Persian/Farsi-oriented interpreted language with an RTL-focused IDE. Free and open source (MIT).">
-  <meta property="og:url" content="https://11nawid.github.io/azravibe/">
-  <meta property="og:image" content="https://11nawid.github.io/azravibe/social-preview.png">
+  <meta property="og:title" content="Azravibe — a Persian-first programming language">
+  <meta property="og:description" content="A programming language you write in Persian. Open source, free, with a right-to-left IDE.">
+  <meta property="og:url" content="https://azravibe.com/">
+  <meta property="og:image" content="https://azravibe.com/social-preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="fa_IR">
-  <meta property="og:locale:alternate" content="en_US">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Azravibe — Persian-first programming language & RTL IDE">
-  <meta name="twitter:description" content="Write code using natural Persian/Farsi keywords. A Persian/Farsi-oriented interpreted language with an RTL-focused IDE. Free and open source (MIT).">
-  <meta name="twitter:image" content="https://11nawid.github.io/azravibe/social-preview.png">
+  <meta name="twitter:title" content="Azravibe — a Persian-first programming language">
+  <meta name="twitter:description" content="A programming language you write in Persian. Open source, free, with a right-to-left IDE.">
+  <meta name="twitter:image" content="https://azravibe.com/social-preview.png">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="256x256" href="icon-256.png">
   <link rel="apple-touch-icon" href="icon-256.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <!-- Styles -->
   <style>
     :root {
-      --deep: #071c2e;
-      --teal: #076d70;
-      --teal-bright: #0d8f8c;
-      --gold: #ffd666;
-      --ink: #e6f2f3;
-      --muted: #9fc4c6;
-      --card: #0a2942;
+      --bg: #fbfcfc;
+      --ink: #17202a;
+      --muted: #6b7a84;
+      --accent: #0d8f8c;
+      --line: #e6ecec;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: "Segoe UI", "Vazirmatn", Tahoma, sans-serif;
-      background: linear-gradient(160deg, #04121f 0%, var(--deep) 45%, #063a3d 100%);
+      background: var(--bg);
       color: var(--ink);
-      line-height: 1.7;
-      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 20px 80px; }
-    header.hero { text-align: center; padding: 50px 0 20px; }
-    .logo {
-      width: 96px; height: 96px; border-radius: 24px;
-      background: linear-gradient(135deg, var(--teal), #063a3d);
-      display: inline-flex; align-items: center; justify-content: center;
-      font-size: 52px; font-weight: 800; color: var(--gold);
-      box-shadow: 0 10px 30px rgba(0,0,0,.45);
-      margin-bottom: 18px;
+    .wrap { max-width: 620px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 76px 24px 0; text-align: center; }
+    .mark { font-size: 40px; font-weight: 800; color: var(--accent); letter-spacing: -1px; }
+    h1 { margin-top: 44px; font-size: 38px; font-weight: 700; letter-spacing: -1.2px; line-height: 1.25; }
+    .sub { margin-top: 16px; font-size: 17px; color: var(--muted); }
+    code, pre { font-family: "Vazir Code", "Consolas", monospace; }
+    pre.sample {
+      margin-top: 52px; padding: 30px 0; border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line); overflow-x: auto;
+      direction: rtl; text-align: left; color: #33424c; font-size: 15px;
     }
-    h1 { font-size: 2.6rem; color: #fff; letter-spacing: -.5px; }
-    h1 .fa { color: var(--gold); }
-    .tagline { font-size: 1.2rem; color: var(--muted); margin-top: 8px; }
-    .badges { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-    .badges img { height: 22px; }
-    .cta { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn {
-      display: inline-block; padding: 13px 26px; border-radius: 12px;
-      text-decoration: none; font-weight: 700; font-size: 1rem;
-      transition: transform .12s ease, box-shadow .12s ease;
-    }
-    .btn-primary { background: linear-gradient(135deg, var(--teal-bright), var(--teal)); color: #fff; }
-    .btn-ghost { border: 1.5px solid var(--muted); color: var(--ink); }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(13,143,140,.4); }
-
-    pre.code {
-      background: #04121f; border: 1px solid #0d3f42; border-radius: 14px;
-      padding: 22px; text-align: left; direction: rtl; font-family: "Vazir Code","Consolas",monospace;
-      font-size: .95rem; overflow-x: auto; color: #cfeef0; box-shadow: 0 8px 24px rgba(0,0,0,.35);
-    }
-    pre.code .c { color: #5b8a8d; } /* comment */
-    pre.code .k { color: var(--gold); } /* keyword */
-
-    section { margin-top: 56px; }
-    h2 { font-size: 1.7rem; color: #fff; margin-bottom: 14px; display:flex; align-items:center; gap:10px; }
-    h2 .hash { color: var(--teal-bright); }
-    p { color: var(--ink); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 16px; }
-    .card { background: var(--card); border: 1px solid #0e3b4a; border-radius: 14px; padding: 18px; }
-    .card strong { color: var(--gold); }
-    ul.pluses { list-style: none; margin-top: 10px; }
-    ul.pluses li { padding: 5px 0; color: var(--muted); }
-    ul.pluses li::before { content: "✓ "; color: var(--teal-bright); font-weight: 700; }
-    .linkrow { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 12px; }
-    .linkrow a { color: var(--teal-bright); font-weight: 600; }
-    footer { text-align: center; margin-top: 70px; color: var(--muted); font-size: .9rem; }
-    footer a { color: var(--muted); }
-    .story-quote { font-style: italic; color: var(--muted); border-right: 3px solid var(--gold); padding-right: 16px; margin-top: 12px; }
-    @media (max-width: 600px){ h1 { font-size: 2rem; } pre.code { font-size: .8rem; } }
+    pre.sample .c { color: #9aa8b0; }
+    pre.sample .k { color: var(--accent); }
+    .links { margin: 40px 0 0; display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; list-style: none; }
+    .links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 15px; border-bottom: 1px solid transparent; }
+    .links a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    footer { max-width: 620px; margin: 0 auto; padding: 80px 24px 48px; text-align: center; color: var(--muted); font-size: 13px; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+    @media (max-width: 480px) { h1 { font-size: 28px; } pre.sample { font-size: 13px; } }
   </style>
 
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Azravibe",
-        "alternateName": "آذرویب",
-        "description": "A Persian/Farsi-first programming language interpreter written in C, with an RTL-focused desktop IDE.",
-        "codeRepository": "https://github.com/11nawid/azravibe",
-        "programmingLanguage": "C",
-        "license": "https://opensource.org/licenses/MIT",
-        "url": "https://11nawid.github.io/azravibe/",
-        "author": {
-          "@type": "Person",
-          "name": "Nawid",
-          "url": "https://github.com/11nawid",
-          "sameAs": "https://www.instagram.com/1n1.nawid"
-        }
-      },
-      {
-        "@type": "WebSite",
-        "name": "Azravibe",
-        "url": "https://11nawid.github.io/azravibe/",
-        "inLanguage": ["fa", "en"]
-      }
-    ]
+    "@type": "SoftwareSourceCode",
+    "name": "Azravibe",
+    "alternateName": "آذرویب",
+    "description": "A programming language you write in Persian. Open source and free, with a right-to-left IDE.",
+    "codeRepository": "https://github.com/11nawid/azravibe",
+    "programmingLanguage": "C",
+    "license": "https://opensource.org/licenses/MIT",
+    "url": "https://azravibe.com/",
+    "author": { "@type": "Person", "name": "Nawid", "url": "https://github.com/11nawid", "sameAs": "https://www.instagram.com/1n1.nawid" }
   }
   </script>
 </head>
 <body>
   <div class="wrap">
-    <header class="hero">
-      <div class="logo">آ</div>
-      <h1>آذرویب <span class="fa">·</span> Azravibe</h1>
-      <p class="tagline">یک زبان برنامه‌نویسی فارسی‌محور و محیط توسعه — write code in Persian</p>
-      <div class="badges">
-        <img alt="MIT license" src="https://img.shields.io/badge/license-MIT-green.svg">
-        <img alt="Version" src="https://img.shields.io/badge/version-v0.1-orange.svg">
-        <img alt="Language" src="https://img.shields.io/badge/built_with-C-blue.svg">
-        <img alt="Platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg">
-      </div>
-      <div class="cta">
-        <a class="btn btn-primary" href="https://github.com/11nawid/azravibe">⭐ Star on GitHub</a>
-        <a class="btn btn-ghost" href="https://github.com/11nawid/azravibe/releases">Download</a>
-        <a class="btn btn-ghost" href="https://github.com/11nawid/azravibe/blob/main/docs/GETTING-STARTED.md">Getting Started</a>
-      </div>
+    <header>
+      <p class="mark">Azravibe</p>
+      <h1>برنامه‌نویسی، به زبان فارسی.</h1>
+      <p class="sub">A programming language you write in Persian.</p>
+
+      <nav>
+        <ul class="links">
+          <li><a href="https://github.com/11nawid/azravibe">GitHub</a></li>
+          <li><a href="https://github.com/11nawid/azravibe/releases">Download</a></li>
+          <li><a href="https://github.com/11nawid/azravibe/blob/main/docs/TUTORIAL.md">Tutorial</a></li>
+          <li><a href="https://github.com/11nawid/azravibe/blob/main/docs/REFERENCE.md">Docs</a></li>
+          <li><a href="https://github.com/11nawid/azravibe/blob/main/STORY.md">Story</a></li>
+        </ul>
+      </nav>
+
+      <pre class="sample"><span class="c"># سلام دنیا</span>
+کار سلام(نام):
+    بده "سلام " + نام
+
+بنویس(سلام("دنیا"))</pre>
     </header>
 
-    <section aria-label="Example">
-      <h2><span class="hash">#</span> Persian-First Code</h2>
-      <pre class="code"><span class="c"># تعریف یک تابع</span>
-کار فیبو(n):
-    اگه n <= 1:
-        بده n
-    <span class="k">وگرنه:</span>
-        بده فیبو(n - 1) + فیبو(n - 2)
-
-<span class="k">برای هر i توی</span> محدوده(10):
-    بنویس(فیبو(i))</pre>
-    </section>
-
-    <section aria-label="Why">
-      <h2><span class="hash">#</span> Why Azravibe?</h2>
-      <p>زبان‌های برنامه‌نویسی معمولاً با کلمات انگلیسی طراحی می‌شوند. آذرویب با کلمات فارسی طراحی شده است — و محیط توسعه‌اش هم پشتیبانی کامل <strong>راست به چپ (RTL)</strong> دارد.</p>
-      <p style="margin-top:10px">Instead of <code>if / def / while</code>, you write <strong>اگه / کار / تا وقتی</strong> — a familiar, Python-like syntax using natural Persian keywords, with full English aliases for bilingual developers.</p>
-    </section>
-
-    <section aria-label="Features">
-      <h2><span class="hash">#</span> What It Includes</h2>
-      <div class="grid">
-        <div class="card"><strong>Persian-First Language</strong>
-          <ul class="pluses">
-            <li>Farsi keywords (dual English aliases)</li>
-            <li>Functions, classes &amp; inheritance</li>
-            <li>Modules, exceptions, generators</li>
-            <li>Dynamic typing, indentation-based</li>
-          </ul>
-        </div>
-        <div class="card"><strong>RTL-Focused IDE</strong>
-          <ul class="pluses">
-            <li>Desktop app (Electron + React)</li>
-            <li>Full right-to-left layout</li>
-            <li>Syntax highlighting</li>
-            <li>Integrated terminal</li>
-          </ul>
-        </div>
-        <div class="card"><strong>Open Source</strong>
-          <ul class="pluses">
-            <li>Interpreted in C (C11)</li>
-            <li>Standard library (23 modules)</li>
-            <li>Native C extension API</li>
-            <li>MIT licensed — free forever</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section aria-label="Resources">
-      <h2><span class="hash">#</span> Explore</h2>
-      <div class="linkrow">
-        <a href="https://github.com/11nawid/azravibe">GitHub Repo</a>
-        <a href="https://github.com/11nawid/azravibe/blob/main/docs/TUTORIAL.md">Tutorial (فارسی)</a>
-        <a href="https://github.com/11nawid/azravibe/blob/main/docs/REFERENCE.md">Language Reference</a>
-        <a href="https://github.com/11nawid/azravibe/blob/main/docs/EXAMPLES.md">Examples</a>
-        <a href="https://github.com/11nawid/azravibe/blob/main/STORY.md">The Story</a>
-      </div>
-      <p class="story-quote">"The point was to learn by building something that seemed difficult. And now I'm sharing what I built."</p>
-    </section>
-
     <footer>
-      <p>© 2026 Azravibe · Released under the <a href="https://github.com/11nawid/azravibe/blob/main/LICENSE">MIT License</a></p>
-      <p>Built with ❤️ for Persian-speaking developers</p>
+      <p>© 2026 Azravibe · <a href="https://github.com/11nawid/azravibe/blob/main/LICENSE">MIT License</a></p>
     </footer>
   </div>
 </body>
