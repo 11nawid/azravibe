@@ -1,0 +1,17 @@
+{
+  "name": "Azravibe — Persian-first Programming Language",
+  "short_name": "Azravibe",
+  "description": "A Persian/Farsi-first programming language and RTL-focused IDE. Write code in Persian.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#071c2e",
+  "theme_color": "#076d70",
+  "lang": "fa",
+  "icons": [
+    {
+      "src": "icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

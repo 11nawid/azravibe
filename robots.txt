@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://11nawid.github.io/azravibe/sitemap.xml
