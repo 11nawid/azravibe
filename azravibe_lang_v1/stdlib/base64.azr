@@ -1,0 +1,8 @@
+b64encode = __base64_encode
+b64decode = __base64_decode
+encode = __base64_encode
+decode = __base64_decode
+standard_b64encode = __base64_encode
+standard_b64decode = __base64_decode
+urlsafe_b64encode = __base64_urlsafe_encode
+urlsafe_b64decode = __base64_urlsafe_decode

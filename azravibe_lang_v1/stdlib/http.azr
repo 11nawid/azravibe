@@ -1,0 +1,23 @@
+get = __http_get
+post = __http_post
+request = __http_request
+head = __http_head
+status = __http_status
+download = __http_download
+
+کار get_json(url):
+    بیار json
+    بده json.loads(get(url))
+
+کار post_json(url، data):
+    بیار json
+    بده post(url، json.dumps(data))
+
+کار put(url، body=""):
+    بده request("PUT"، url، body)
+
+کار patch(url، body=""):
+    بده request("PATCH"، url، body)
+
+کار delete(url):
+    بده request("DELETE"، url، "")

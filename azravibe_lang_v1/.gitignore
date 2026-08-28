@@ -1,0 +1,16 @@
+azr
+azr.exe
+build/
+dist/installer-work/
+hello.azr
+stdlib.zip
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+*.ilk
+*.pdb
+*.exe
+.vscode/
+.idea/

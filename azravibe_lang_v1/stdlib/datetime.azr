@@ -1,0 +1,43 @@
+now = زمان_اکنون
+timestamp = زمان
+iso_now = __datetime_iso
+format = __datetime_format
+fromtimestamp = __datetime_format
+parts = __datetime_parts
+fromisoformat = __datetime_parse_iso
+
+کار today():
+    بده format(زمان()، "%Y-%m-%d")
+
+کار time():
+    بده زمان()
+
+کار date():
+    بده today()
+
+کار strftime(ts، fmt):
+    بده format(ts، fmt)
+
+کار year(ts):
+    بده parts(ts).year
+
+کار month(ts):
+    بده parts(ts).month
+
+کار day(ts):
+    بده parts(ts).day
+
+کار hour(ts):
+    بده parts(ts).hour
+
+کار minute(ts):
+    بده parts(ts).minute
+
+کار second(ts):
+    بده parts(ts).second
+
+کار weekday(ts):
+    بده parts(ts).weekday
+
+کار isoformat(ts):
+    بده format(ts، "%Y-%m-%dT%H:%M:%S")

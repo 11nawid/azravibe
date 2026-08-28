@@ -1,0 +1,27 @@
+log = __logging_log
+basicConfig = __logging_config
+basic_config = __logging_config
+
+DEBUG = "DEBUG"
+INFO = "INFO"
+WARNING = "WARNING"
+ERROR = "ERROR"
+CRITICAL = "CRITICAL"
+
+کار info(message):
+    بده log("INFO"، message)
+
+کار warning(message):
+    بده log("WARNING"، message)
+
+کار error(message):
+    بده log("ERROR"، message)
+
+کار debug(message):
+    بده log("DEBUG"، message)
+
+کار critical(message):
+    بده log("CRITICAL"، message)
+
+کار exception(message):
+    بده log("ERROR"، message)

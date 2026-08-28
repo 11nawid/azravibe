@@ -1,0 +1,33 @@
+getcwd = __os_getcwd
+chdir = __os_chdir
+mkdir = __os_mkdir
+makedirs = __os_mkdir
+remove = __os_remove
+unlink = __os_remove
+rmdir = __os_rmdir
+rename = __os_rename
+exists = وجود_دارد
+listdir = پوشه_لیست
+environ = محیط
+getenv = __os_getenv
+putenv = __os_setenv
+setenv = __os_setenv
+system = فرمان
+stat = __os_stat
+getsize = __os_getsize
+getmtime = __os_getmtime
+isfile = __os_isfile
+isdir = __os_isdir
+walk_recursive = __os_walk
+name = __sys_platform()
+sep = "/"
+linesep = "\n"
+
+کار walk(path):
+    بده walk_recursive(path، 1)
+
+کار scandir(path):
+    بده walk_recursive(path، 0)
+
+کار path_exists(path):
+    بده exists(path)

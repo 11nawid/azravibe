@@ -1,0 +1,44 @@
+encode = __url_encode
+decode = __url_decode
+quote = __url_encode
+unquote = __url_decode
+parse = __url_parse
+parse_qs = __url_parse_qs
+parse_qsl = __url_parse_qsl
+urlparse = __url_parse
+quote_plus = __url_encode
+unquote_plus = __url_decode
+
+کار query(params):
+    parts = []
+    برای هر key توی کلیدها(params):
+        اضافه(parts، encode(key) + "=" + encode(params[key]))
+    بده بچسبان(parts، "&")
+
+کار urlencode(params):
+    بده query(params)
+
+کار urlsplit(value):
+    بده parse(value)
+
+کار splitquery(value):
+    parsed = parse(value)
+    بده [parsed.path، parsed.query]
+
+کار urlunparse(parts):
+    out = ""
+    اگه parts.scheme != "":
+        out = parts.scheme + "://"
+    out = out + parts.host + parts.path
+    اگه parts.query != "":
+        out = out + "?" + parts.query
+    اگه parts.fragment != "":
+        out = out + "#" + parts.fragment
+    بده out
+
+کار join(base، path):
+    اگه تکرار_داره(path، "http://") یا تکرار_داره(path، "https://"):
+        بده path
+    اگه base[طول(base) - 1] == "/":
+        بده base + path
+    بده base + "/" + path

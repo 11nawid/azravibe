@@ -1,0 +1,49 @@
+parse = __csv_parse
+loads = __csv_parse
+stringify = __csv_stringify
+dumps = __csv_stringify
+reader = __csv_parse
+writer = __csv_stringify
+
+کار load(path):
+    بده parse(فایل_بخوان(path))
+
+کار dump(rows، path):
+    بده فایل_بنویس(path، stringify(rows))
+
+کار read(path):
+    بده load(path)
+
+کار write(path، rows):
+    بده dump(rows، path)
+
+کار rows_to_dicts(rows):
+    out = []
+    اگه طول(rows) == 0:
+        بده out
+    header = rows[0]
+    برای هر i توی محدوده(1، طول(rows)):
+        row = rows[i]
+        item = {}
+        برای هر c توی محدوده(طول(header)):
+            item[header[c]] = row[c]
+        اضافه(out، item)
+    بده out
+
+DictReader = rows_to_dicts
+
+کار dicts_to_rows(items):
+    out = []
+    اگه طول(items) == 0:
+        بده out
+    header = کلیدها(items[0])
+    اضافه(out، header)
+    برای هر item توی items:
+        row = []
+        برای هر key توی header:
+            اضافه(row، item[key])
+        اضافه(out، row)
+    بده out
+
+کار DictWriter(items):
+    بده stringify(dicts_to_rows(items))

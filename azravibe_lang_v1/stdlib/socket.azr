@@ -1,0 +1,16 @@
+tcp_check = __socket_tcp_check
+can_connect = __socket_tcp_check
+gethostbyname = __socket_resolve
+hostname = __socket_hostname
+
+کار open(host، port):
+    بده tcp_check(host، port)
+
+کار create_connection(host، port):
+    بده tcp_check(host، port)
+
+کار wait_for(host، port، tries=3):
+    برای هر i توی محدوده(tries):
+        اگه tcp_check(host، port):
+            بده درسته
+    بده غلطه

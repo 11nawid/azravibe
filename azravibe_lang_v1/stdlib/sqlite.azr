@@ -1,0 +1,24 @@
+query = __sqlite_query
+execute = __sqlite_query
+exec = __sqlite_exec
+tables = __sqlite_tables
+
+کار connect(path):
+    بده {"path": path، "execute": exec، "query": query، "tables": tables}
+
+کار rows(path، sql):
+    بیار csv
+    بده csv.parse(query(path، sql))
+
+کار scalar(path، sql):
+    r = rows(path، sql)
+    اگه طول(r) > 1 و طول(r[1]) > 0:
+        بده r[1][0]
+    بده هیچ
+
+کار query_dicts(path، sql):
+    بیار csv
+    بده csv.rows_to_dicts(rows(path، sql))
+
+کار executescript(path، script):
+    بده exec(path، script)

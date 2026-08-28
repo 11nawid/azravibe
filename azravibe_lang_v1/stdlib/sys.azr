@@ -1,0 +1,11 @@
+platform = __sys_platform()
+version = __sys_version()
+argv = []
+executable = "azravibe"
+path = ["stdlib"]
+
+کار exit(code=0):
+    خروج(code)
+
+کار getenv(name):
+    بده محیط(name)

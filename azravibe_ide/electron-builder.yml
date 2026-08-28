@@ -1,0 +1,40 @@
+appId: com.azravibe.ide
+productName: Azravibe IDE
+copyright: Copyright © 2026 Azravibe
+directories:
+  output: dist
+  buildResources: public
+files:
+  - out/**/*
+  - package.json
+extraResources:
+  - from: public/icon.ico
+    to: icon.ico
+asarUnpack:
+  - node_modules/node-pty/**/*
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: public/icon.ico
+  executableName: Azravibe IDE
+  artifactName: ${productName}-Setup-${version}.${ext}
+  publisherName: Azravibe
+fileAssociations:
+  - ext: azr
+    name: Azravibe Source File
+    description: Azravibe programming language source file
+    icon: public/icon.ico
+    role: Editor
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  runAfterFinish: true
+  shortcutName: Azravibe IDE
+  uninstallDisplayName: Azravibe IDE
+  deleteAppDataOnUninstall: false

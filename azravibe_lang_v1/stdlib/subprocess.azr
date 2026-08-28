@@ -1,0 +1,16 @@
+run = __subprocess_run
+check_output = __subprocess_output
+run_result = __subprocess_result
+CompletedProcess = __subprocess_result
+output = __subprocess_output
+call = __subprocess_run
+getoutput = __subprocess_output
+
+کار check_call(command):
+    code = run(command)
+    اگه code != 0:
+        بینداز "subprocess failed"
+    بده code
+
+کار capture(command):
+    بده run_result(command)

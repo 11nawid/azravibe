@@ -1,0 +1,9 @@
+sleep = __thread_sleep
+active_count = __thread_active_count
+
+کار start(command):
+    بیار subprocess
+    بده subprocess.run(command)
+
+کار Thread(command):
+    بده {"command": command}

@@ -1,0 +1,72 @@
+# ===========================
+# Azravibe - Root .gitignore
+# ===========================
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Language compiler build artifacts
+azravibe_lang_v1/*.o
+azravibe_lang_v1/*.obj
+azravibe_lang_v1/build/
+azravibe_lang_v1/dist/
+azravibe_lang_v1/stdlib.zip
+azravibe_lang_v1/hello.azr
+
+# Compiled binaries (tracked separately or via releases)
+azravibe_lang_v1/azr.exe
+azravibe_lang_v1/azravibe.exe
+azravibe_lang_v1/azr
+azravibe_lang_v1/azravibe
+
+# Native extension artifacts
+*.dll
+*.so
+*.dylib
+*.ilk
+*.pdb
+
+# IDE build artifacts
+azravibe_ide/node_modules/
+azravibe_ide/dist/
+azravibe_ide/out/
+azravibe_ide/.vite/
+
+# Installer build artifacts
+azravibe_lang_v1/installer/installer-work/
+azravibe_lang_v1/installer/output/
+
+# Release artifacts (attached to GitHub Releases, not committed)
+releases/
+*.zip
+*-Setup-*.exe
+azravibe_ide/dist/*.exe
+
+# Temporary files
+*.tmp
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Package lock files (optional - uncomment if not tracking)
+# package-lock.json
+
+# Node
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build directories
+cmake-build-*/

@@ -1,0 +1,28 @@
+join = مسیر_بچسبان
+exists = وجود_دارد
+basename = __path_basename
+dirname = __path_dirname
+extname = __path_ext
+splitext = __path_splitext
+split = __path_split
+isabs = __path_isabs
+abspath = __path_abs
+normpath = __path_norm
+expanduser = __path_expanduser
+realpath = __path_abs
+
+کار stem(p):
+    b = basename(p)
+    e = extname(b)
+    اگه طول(e) == 0:
+        بده b
+    بده b[0:طول(b) - طول(e)]
+
+کار parent(p):
+    بده dirname(p)
+
+کار name(p):
+    بده basename(p)
+
+کار suffix(p):
+    بده extname(p)

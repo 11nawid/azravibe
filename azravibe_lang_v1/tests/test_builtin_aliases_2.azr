@@ -1,0 +1,5 @@
+ینویس("alias-short-print")
+print("alias-python-print")
+بنویس("alias-farsi-print")
+بنویس(len([1، 2، 3]))
+بنویس(طول(range(3)))

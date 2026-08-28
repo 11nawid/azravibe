@@ -1,0 +1,8 @@
+parse = __argparse_parse
+parse_known_args = __argparse_parse_known
+
+کار parse_args(args):
+    بده parse(args)
+
+کار ArgumentParser():
+    بده {"parse_args": parse، "parse_known_args": parse_known_args}

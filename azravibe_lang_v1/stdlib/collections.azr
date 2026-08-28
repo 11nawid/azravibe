@@ -1,0 +1,54 @@
+counter = __collections_counter
+Counter = __collections_counter
+defaultdict = __collections_defaultdict
+deque = __collections_deque
+appendleft = __collections_deque_appendleft
+popleft = __collections_deque_popleft
+rotate = __collections_deque_rotate
+elements = __collections_counter_elements
+total = __collections_counter_total
+
+کار keys(d):
+    بده کلیدها(d)
+
+کار values(d):
+    بده مقدارها(d)
+
+کار namedtuple(name، fields):
+    بده {"name": name، "fields": fields}
+
+کار most_common(counter_map):
+    out = []
+    برای هر key توی کلیدها(counter_map):
+        اضافه(out، [key، counter_map[key]])
+    بده out
+
+کار update(counter_map، items):
+    برای هر item توی items:
+        اگه دارد(counter_map، item):
+            counter_map[item] = counter_map[item] + 1
+        وگرنه:
+            counter_map[item] = 1
+    بده counter_map
+
+کار subtract(counter_map، items):
+    برای هر item توی items:
+        اگه دارد(counter_map، item):
+            counter_map[item] = counter_map[item] - 1
+        وگرنه:
+            counter_map[item] = -1
+    بده counter_map
+
+کار ChainMap(a، b):
+    out = {}
+    برای هر key توی کلیدها(b):
+        out[key] = b[key]
+    برای هر key توی کلیدها(a):
+        out[key] = a[key]
+    بده out
+
+کار OrderedDict(items):
+    out = {}
+    برای هر pair توی items:
+        out[pair[0]] = pair[1]
+    بده out

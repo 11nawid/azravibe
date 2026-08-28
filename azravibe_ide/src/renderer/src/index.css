@@ -1,0 +1,350 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/Vazirmatn-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/Vazirmatn-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AzravibeConsoleText';
+  src: local('Arial'), local('Arial Regular');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range:
+    U+0000-024F,
+    U+1E00-1EFF,
+    U+2000-206F,
+    U+20A0-20CF;
+}
+
+@font-face {
+  font-family: 'AzravibeConsoleText';
+  src: url('./assets/fonts/Vazir-Code-Extra-Height-WOL.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range:
+    U+0600-06FF,
+    U+0750-077F,
+    U+08A0-08FF,
+    U+200C-200D,
+    U+FB50-FDFF,
+    U+FE70-FEFF;
+}
+
+:root {
+  /* Default: Azravibe Dark */
+  --bg-color: #0D0D0D;
+  --sidebar-color: #111111;
+  --editor-color: #1A1A1A;
+  --accent-color: #00F5FF;
+  --text-color: #CCCCCC;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body.theme-azravibe {
+  --bg-color: #0D0D0D;
+  --sidebar-color: #111111;
+  --editor-color: #1A1A1A;
+  --accent-color: #00F5FF;
+  --text-color: #CCCCCC;
+}
+
+body.theme-vscode {
+  --bg-color: #1E1E1E;
+  --sidebar-color: #252526;
+  --editor-color: #1E1E1E;
+  --accent-color: #007ACC;
+  --text-color: #CCCCCC;
+}
+
+body.theme-light {
+  --bg-color: #F3F3F3;
+  --sidebar-color: #E1E1E2;
+  --editor-color: #FFFFFF;
+  --accent-color: #007ACC;
+  --text-color: #2A2A2A;
+}
+
+body.theme-light .text-white,
+body.theme-light .text-neutral-200,
+body.theme-light .text-neutral-300,
+body.theme-light .text-neutral-400 {
+  color: #1f2937 !important;
+}
+
+body.theme-light .text-neutral-500 {
+  color: #6b7280 !important;
+}
+
+body.theme-light .text-accent {
+  color: var(--accent-color) !important;
+}
+
+body.theme-light .hover\:text-accent:hover {
+  color: var(--accent-color) !important;
+}
+
+body.theme-light .hover\:text-white:hover {
+  color: #111827 !important;
+}
+
+body.theme-light .bg-sidebar,
+body.theme-light .bg-bg,
+body.theme-light .bg-editor {
+  color: var(--text-color);
+}
+
+body.theme-light .bg-neutral-900,
+body.theme-light .bg-neutral-800,
+body.theme-light .bg-\[\#0D0D0D\],
+body.theme-light .bg-\[\#111111\],
+body.theme-light .bg-\[\#1A1A1A\] {
+  background-color: #ffffff !important;
+}
+
+body.theme-light .border-neutral-800,
+body.theme-light .border-neutral-800\/80,
+body.theme-light .border-neutral-900 {
+  border-color: #d1d5db !important;
+}
+
+body.theme-light .context-menu {
+  background: #ffffff;
+  border-color: #d1d5db;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
+}
+
+body.theme-light ::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+body.theme-light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Vazirmatn', sans-serif;
+  }
+}
+
+/* Custom Scrollbar for sleek premium look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00F5FF;
+}
+
+/* Titlebar Drag Region */
+.drag-region {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* Custom Context Menu styling */
+.context-menu {
+  background: #111111;
+  border: 1px solid #222222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+/* VS Code-like Explorer tree geometry */
+.explorer-tree-row {
+  position: relative;
+  min-height: 24px;
+  line-height: 24px;
+  border-radius: 0;
+  isolation: isolate;
+}
+
+.explorer-tree-row-root {
+  min-height: 25px;
+}
+
+.explorer-tree-row-open {
+  color: #e6e6e6;
+}
+
+.explorer-tree-group {
+  position: relative;
+  --tree-depth: 1;
+}
+
+.explorer-tree-group::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: 3px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(126, 87, 194, 0.2),
+    rgba(126, 87, 194, 0.78) 8px,
+    rgba(126, 87, 194, 0.78) calc(100% - 8px),
+    rgba(126, 87, 194, 0.12)
+  );
+  pointer-events: none;
+}
+
+.explorer-tree-group-ltr::before {
+  left: calc((var(--tree-depth) * 12px) + 3px);
+}
+
+.explorer-tree-group-rtl::before {
+  right: calc((var(--tree-depth) * 12px) + 3px);
+}
+
+.explorer-tree-group > .explorer-tree-item > .explorer-tree-row::before,
+.explorer-tree-group > .explorer-inline-create::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  width: 11px;
+  height: 1px;
+  background: rgba(126, 87, 194, 0.75);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.explorer-tree-group > .explorer-tree-item > .explorer-tree-row:hover::before,
+.explorer-tree-group > .explorer-tree-item > .explorer-tree-row.bg-\[\#04395e\]::before {
+  background: rgba(150, 122, 255, 0.95);
+}
+
+.explorer-tree-group-ltr > .explorer-tree-item > .explorer-tree-row::before,
+.explorer-tree-group-ltr > .explorer-inline-create::before {
+  left: calc((var(--tree-depth) * 12px) + 3px);
+}
+
+.explorer-tree-group-rtl > .explorer-tree-item > .explorer-tree-row::before,
+.explorer-tree-group-rtl > .explorer-inline-create::before {
+  right: calc((var(--tree-depth) * 12px) + 3px);
+}
+
+.explorer-inline-create {
+  position: relative;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+/* Code editor RTL text flow tweaks */
+.cm-editor {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
+
+/* Xterm Custom Styles */
+.xterm {
+  padding: 8px;
+}
+.xterm-viewport::-webkit-scrollbar {
+  width: 8px;
+}
+.xterm-viewport::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+.xterm-viewport::-webkit-scrollbar-thumb:hover {
+  background: #00F5FF;
+}
+
+/* Enhanced Terminal Selection Visibility */
+.xterm .xterm-screen ::selection {
+  background: rgba(0, 245, 255, 0.4) !important;
+  color: #FFFFFF !important;
+}
+
+.xterm .xterm-screen::-moz-selection {
+  background: rgba(0, 245, 255, 0.4) !important;
+  color: #FFFFFF !important;
+}
+
+/* Ensure terminal text is selectable */
+.xterm .xterm-screen {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+/* Ensure xterm rows are selectable */
+.xterm-rows {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+.azr-console-text {
+  font-family: 'AzravibeConsoleText', Arial, sans-serif;
+}
+
+.azr-console-shell textarea,
+.azr-console-shell button,
+.azr-console-shell div,
+.azr-console-shell span {
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+}
+
+/* Prevent parent containers from blocking selection */
+.xterm *,
+.xterm-rows * {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+/* Glow effects */
+.glow-accent {
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.15);
+}
+
+.glow-text {
+  text-shadow: 0 0 8px rgba(0, 245, 255, 0.4);
+}
+
+/* Keep editor geometry native; forcing RTL layout here breaks cursor and selection math. */
+.code-editor-rtl .line-numbers {
+  opacity: 0.65 !important;
+}

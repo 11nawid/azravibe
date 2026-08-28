@@ -1,0 +1,19 @@
+sha256 = __hash_sha256
+md5 = __hash_md5
+hash = __hash_value
+sha1 = __hash_sha1
+sha384 = __hash_sha384
+sha512 = __hash_sha512
+
+کار hexdigest(value، algorithm="sha256"):
+    اگه algorithm == "md5":
+        بده md5(value)
+    اگه algorithm == "sha1":
+        بده sha1(value)
+    اگه algorithm == "sha384":
+        بده sha384(value)
+    اگه algorithm == "sha512":
+        بده sha512(value)
+    بده sha256(value)
+
+algorithms_available = ["md5"، "sha1"، "sha256"، "sha384"، "sha512"]

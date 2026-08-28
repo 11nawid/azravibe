@@ -1,0 +1,27 @@
+random = تصادفی
+randint = __random_int
+choice = __random_choice
+seed = __random_seed
+shuffle = __random_shuffle
+sample = __random_sample
+choices = __random_choices
+getrandbits = __random_getrandbits
+expovariate = __random_expovariate
+gauss = __random_gauss
+normalvariate = __random_gauss
+triangular = __random_triangular
+
+کار uniform(a، b):
+    بده a + تصادفی() * (b - a)
+
+کار randrange(start، stop، step=1):
+    اگه step <= 1:
+        بده randint(start، stop - 1)
+    span = (stop - start) / step
+    بده start + step * randint(0، عدد_صحیح(span) - 1)
+
+کار randbytes(n):
+    out = []
+    برای هر i توی محدوده(n):
+        اضافه(out، randint(0، 255))
+    بده بایت(out)

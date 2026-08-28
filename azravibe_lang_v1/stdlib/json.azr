@@ -1,0 +1,25 @@
+loads = __json_loads
+parse = __json_loads
+dumps = __json_dumps
+stringify = __json_dumps
+
+کار load(path):
+    بده loads(فایل_بخوان(path))
+
+کار dump(value، path):
+    بده فایل_بنویس(path، dumps(value))
+
+کار load_file(path):
+    بده load(path)
+
+کار dump_file(value، path):
+    بده dump(value، path)
+
+کار pretty(value):
+    بده dumps(value)
+
+کار clone(value):
+    بده loads(dumps(value))
+
+read = load
+write = dump

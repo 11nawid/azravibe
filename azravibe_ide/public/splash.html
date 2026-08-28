@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: #0d0d0d;
+      color: #d4d4d4;
+      font-family: "Segoe UI", "Vazirmatn", Arial, sans-serif;
+    }
+
+    .splash {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      align-items: center;
+      gap: 22px;
+      padding: 30px 36px;
+      border: 1px solid #2a2a2a;
+      background: #111111;
+    }
+
+    .logo-wrap {
+      width: 74px;
+      height: 74px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #2a2a2a;
+      background: #0d0d0d;
+    }
+
+    .logo {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .title {
+      color: #f2f2f2;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.1;
+      margin-bottom: 7px;
+    }
+
+    .subtitle {
+      color: #8b949e;
+      font-size: 12px;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .progress {
+      width: 250px;
+      height: 2px;
+      overflow: hidden;
+      background: #2a2a2a;
+    }
+
+    .progress::before {
+      content: "";
+      display: block;
+      width: 38%;
+      height: 100%;
+      background: #00f5ff;
+      animation: loading 1.4s ease-in-out infinite;
+    }
+
+    .status {
+      margin-top: 10px;
+      color: #6f7782;
+      font-size: 11px;
+    }
+
+    @keyframes loading {
+      0% { transform: translateX(-110%); }
+      55% { transform: translateX(120%); }
+      100% { transform: translateX(260%); }
+    }
+  </style>
+</head>
+<body>
+  <main class="splash">
+    <div class="logo-wrap">
+      <img class="logo" src="icons/use-in-dark-theme.png" alt="Azravibe IDE" />
+    </div>
+    <section class="content">
+      <div class="title">Azravibe IDE</div>
+      <div class="subtitle">Preparing the workspace</div>
+      <div class="progress" aria-hidden="true"></div>
+      <div class="status">Starting editor services...</div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+pi = 3.14159265358979
+e = 2.71828182845904
+tau = 6.28318530717958
+sin = __math_sin
+cos = __math_cos
+tan = __math_tan
+asin = __math_asin
+acos = __math_acos
+atan = __math_atan
+atan2 = __math_atan2
+log = __math_log
+log10 = __math_log10
+exp = __math_exp
+sqrt = __math_sqrt
+pow = __math_pow
+trunc = __math_trunc
+fmod = __math_fmod
+hypot = __math_hypot
+copysign = __math_copysign
+isfinite = __math_isfinite
+isinf = __math_isinf
+isnan = __math_isnan
+gcd = __math_gcd
+lcm = __math_lcm
+comb = __math_comb
+perm = __math_perm
+abs = مطلق
+round = گرد
+ceil = بالا
+floor = پایین
+max = بیشترین
+min = کمترین
+isclose = __math_isclose
+degrees = __math_degrees
+radians = __math_radians
+
+factorial = __math_factorial_native
+
+کار prod(items):
+    out = 1
+    برای هر item توی items:
+        out = out * item
+    بده out
+
+کار dist(a، b):
+    total = 0
+    برای هر i توی محدوده(طول(a)):
+        d = a[i] - b[i]
+        total = total + d * d
+    بده sqrt(total)
