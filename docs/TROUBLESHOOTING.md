@@ -237,7 +237,7 @@ Very large files (1000+ lines) may cause syntax highlighting to lag. This is a k
 
 If your problem is not listed here:
 
-1. Check the [GitHub Issues](https://github.com/azravibe/azravibe/issues) for similar reports
+1. Check the [GitHub Issues](https://github.com/11nawid/azravibe/issues) for similar reports
 2. Open a new issue with:
    - Your operating system and version
    - Azravibe version (`azravibe --version`)

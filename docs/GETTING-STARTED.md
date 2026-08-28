@@ -16,7 +16,7 @@ A complete beginner-friendly guide to installing Azravibe, writing your first pr
 
 ### Option 1: Windows Installer (Recommended)
 
-1. Download the installer from the [Releases](https://github.com/azravibe/azravibe/releases) page
+1. Download the installer from the [Releases](https://github.com/11nawid/azravibe/releases) page
 2. Run `Azravibe-Setup-{version}.exe`
 3. Follow the installation wizard:
    - Choose the installation directory (default: `%LOCALAPPDATA%\Programs\Azravibe`)
@@ -42,7 +42,7 @@ You should see:
 
 ```bash
 # Clone the repository
-git clone https://github.com/azravibe/azravibe.git
+git clone https://github.com/11nawid/azravibe.git
 cd azravibe/azravibe_lang_v1
 
 # Build
@@ -59,7 +59,7 @@ sudo make install
 
 ```powershell
 # Clone the repository
-git clone https://github.com/azravibe/azravibe.git
+git clone https://github.com/11nawid/azravibe.git
 cd azravibe\azravibe_lang_v1
 
 # Build

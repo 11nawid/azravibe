@@ -120,7 +120,7 @@ Major milestones for a production-quality language.
 
 The roadmap is a living document. If you would like to suggest changes or priorities:
 
-1. Open a [GitHub Discussion](https://github.com/azravibe/azravibe/discussions) with your proposal
+1. Open a [GitHub Discussion](https://github.com/11nawid/azravibe/discussions) with your proposal
 2. Explain why the feature is important to you
 3. Describe any use cases that depend on it
 

@@ -92,7 +92,7 @@ See [Project Status](docs/STATUS.md) for what is planned but not yet implemented
 
 ### Windows (Installer)
 
-Download and run the Windows installer from the [Releases](https://github.com/azravibe/azravibe/releases) page. The installer:
+Download and run the Windows installer from the [Releases](https://github.com/11nawid/azravibe/releases) page. The installer:
 
 - Installs `azravibe.exe` and `azr.exe` (compatibility alias)
 - Installs the standard library
@@ -198,8 +198,8 @@ Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to:
 
 ## Community
 
-- **Issues:** [GitHub Issues](https://github.com/azravibe/azravibe/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/azravibe/azravibe/discussions)
+- **Issues:** [GitHub Issues](https://github.com/11nawid/azravibe/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/11nawid/azravibe/discussions)
 
 ---
 

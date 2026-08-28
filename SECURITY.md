@@ -6,7 +6,7 @@ If you discover a security vulnerability in Azravibe, please report it responsib
 
 **Do not open a public GitHub issue for security vulnerabilities.**
 
-Instead, please report security issues through [GitHub's private vulnerability reporting](https://github.com/azravibe/azravibe/security/advisories/new) if available, or by contacting the maintainer through a private channel.
+Instead, please report security issues through [GitHub's private vulnerability reporting](https://github.com/11nawid/azravibe/security/advisories/new) if available, or by contacting the maintainer through a private channel.
 
 ### What to Include
 

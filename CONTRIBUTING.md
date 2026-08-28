@@ -28,7 +28,7 @@ When reporting a bug, please include:
 6. **Minimal code example** -- The smallest `.azr` file that reproduces the bug
 7. **Error message** -- The exact error output
 
-File issues at: [GitHub Issues](https://github.com/azravibe/azravibe/issues)
+File issues at: [GitHub Issues](https://github.com/11nawid/azravibe/issues)
 
 ---
 
@@ -55,7 +55,7 @@ Feature requests are welcome. Please describe:
 ### Building the Language
 
 ```bash
-git clone https://github.com/azravibe/azravibe.git
+git clone https://github.com/11nawid/azravibe.git
 cd azravibe/azravibe_lang_v1
 make
 ```
@@ -237,4 +237,4 @@ Please be respectful and constructive in all interactions. See [CODE_OF_CONDUCT.
 
 ## Questions?
 
-Open a [GitHub Discussion](https://github.com/azravibe/azravibe/discussions) or file an issue.
+Open a [GitHub Discussion](https://github.com/11nawid/azravibe/discussions) or file an issue.

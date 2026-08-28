@@ -20,7 +20,7 @@ The Azravibe IDE is a desktop code editor built specifically for the Azravibe pr
 
 ### Pre-built Release
 
-Download the installer from the [Releases](https://github.com/azravibe/azravibe/releases) page. The IDE installs to your system like any standard application.
+Download the installer from the [Releases](https://github.com/11nawid/azravibe/releases) page. The IDE installs to your system like any standard application.
 
 ### Building from Source
 
