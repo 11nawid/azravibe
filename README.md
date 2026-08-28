@@ -7,6 +7,7 @@
 [![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)](#installation)
 [![Language](https://img.shields.io/badge/built_with-C-blue.svg)](azravibe_lang_v1/)
 [![Story](https://img.shields.io/badge/read%20my%20story-%F0%9F%93%96-8A2BE2.svg)](STORY.md)
+[![Website](https://img.shields.io/badge/Website-%F0%9F%8C%90-teal.svg)](https://11nawid.github.io/azravibe/)
 
 [![Support on Instagram](https://img.shields.io/badge/Support%20the%20Dev-%40n1n.nawid-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/1n1.nawid)
 
@@ -16,7 +17,7 @@ Azravibe (آذرویب) is an interpreted programming language where you write c
 
 The project includes a language interpreter written in C and a desktop IDE built with Electron, React, and CodeMirror, featuring full RTL (right-to-left) support, syntax highlighting, and an integrated terminal.
 
-**Azravibe is early-stage software (v.0.1).** It works and can be used to build CLI programs, but it is not yet a complete general-purpose ecosystem. See [Project Status](docs/STATUS.md) for details.
+**Azravibe is early-stage software (v.0.1).** It works and can be used to build CLI programs, but it is not yet a complete general-purpose ecosystem. See the [project website](https://11nawid.github.io/azravibe/) and [Project Status](docs/STATUS.md) for details.
 
 ---
 
@@ -149,6 +150,7 @@ That's it. See [Getting Started](docs/GETTING-STARTED.md) for a complete walkthr
 
 | Document | Description |
 |---|---|
+| [Website](https://11nawid.github.io/azravibe/) | Project landing page |
 | [Getting Started](docs/GETTING-STARTED.md) | Installation, first project, running code |
 | [Tutorial](docs/TUTORIAL.md) | Learn Azravibe step by step |
 | [Language Reference](docs/REFERENCE.md) | Complete technical reference |
